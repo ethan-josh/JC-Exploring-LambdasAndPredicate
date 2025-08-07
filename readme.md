@@ -33,6 +33,7 @@ Is 'This is a very long string' long? true
 <img src="https://github.com/ethan-josh/JC-Exploring-LambdasAndPredicate/blob/main/images/Ex1.png"/>
 
 **Explanation:**
+
 `s`: This is the parameter for the test method. Java knows its type is String because we declared the Predicate<String>.
 
 `->`: The arrow token separates the parameter(s) from the body of the expression.
@@ -92,6 +93,7 @@ Bravo
 <img src="https://github.com/ethan-josh/JC-Exploring-LambdasAndPredicate/blob/main/images/Ex2.png"/>
 
 **Explanation:**
+
 We passed our startsWithA predicate into the filterAndPrint method. Inside the loop, the line if `(predicate.test(item))` executes the lambda's logic `(s -> s.startsWith("A"))` for each call sign. 
 This makes our filterAndPrint method incredibly reusable—we can now pass any string-testing logic to it without changing the method itself.
 
@@ -155,6 +157,7 @@ Echo
 <img src="https://github.com/ethan-josh/JC-Exploring-LambdasAndPredicate/blob/main/images/Ex3.png"/>
 
 **Explanation:**
+
 `predicate1.and(predicate2)` creates a new Predicate that returns true only if both original predicates return true.
 
 `predicate.negate()` creates a new Predicate that returns the opposite boolean value of the original.
