@@ -24,7 +24,8 @@ public class LambdaLab {
 ```
 **Predicted Output:**
 ```
-
+Is 'short' long? false
+Is 'This is a very long string' long? true
 ```
 
 **Actual Output:**
