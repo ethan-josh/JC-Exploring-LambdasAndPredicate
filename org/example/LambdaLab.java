@@ -31,12 +31,20 @@ public class LambdaLab{
         Predicate<String> startsWithA = s -> s.startsWith("A");
 
         // Pass the list and the predicate (the behavior) to our method
-        filterAndPrint(callSigns, startsWithA, "Call signs starting with 'A'");
+        // filterAndPrint(callSigns, startsWithA, "Call signs starting with 'A'");
         // ******************************************
 
 
         // Exercise #3 ******************************
+        Predicate<String> hasLengthGreaterThan5 = s -> s.length() > 5;
         
+        // Call signs that start with 'A' AND have a length > 5
+        Predicate<String> complexCondition = startsWithA.and(hasLengthGreaterThan5);
+        filterAndPrint(callSigns, complexCondition, "Starts with 'A' AND length > 5");
+        
+        // Call signs that do NOT start with 'A'
+        Predicate<String> doesNotStartWithA = startsWithA.negate();
+        filterAndPrint(callSigns, doesNotStartWithA, "Does NOT start with 'A'");
         // ******************************************
 
 	}
